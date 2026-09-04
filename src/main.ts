@@ -34,3 +34,26 @@ const book2 = new Book("The Lord of the Rings", "J.R.R. Tolkien", 1954);
 // Display the books on the webpage
 displayBook(book1);
 displayBook(book2);
+
+// Review interface
+interface Review {
+  bookId: number;
+  rating: number;
+  comment: string;
+}
+
+// Add a function to add a review to a book
+const reviews: Review[] = [];
+
+function addReview(bookId: number, rating: number, comment: string): void {
+  const review: Review = {
+    bookId: bookId,
+    rating: rating,
+    comment: comment
+  };
+
+  reviews.push(review);
+}
+
+addReview(1, 5, "I love this book!");
+addReview(2, 4, "I really like this book though not as much as the first one.");
